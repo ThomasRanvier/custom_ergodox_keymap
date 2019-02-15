@@ -175,7 +175,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_AACUTE:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"E!");//E1
+          send_unicode_hex_string("E1");//E1
         } else {
           SEND_STRING(SS_LALT("0225"));
         }
@@ -185,7 +185,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_AGRAVE:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"E)");//E0
+          send_unicode_hex_string("E0");//E0
         } else {
           SEND_STRING(SS_LALT("0224"));
         }
@@ -195,7 +195,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_ACIRC:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"E@");//E2
+          send_unicode_hex_string("E2");//E2
         } else {
           SEND_STRING(SS_LALT("0226"));
         }
@@ -205,7 +205,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_ADIAER:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"E$");//E4
+          send_unicode_hex_string("E4");//E4
         } else {
           SEND_STRING(SS_LALT("0228"));
         }
@@ -216,7 +216,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_EACUTE:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"E(");//E9
+          send_unicode_hex_string("E9");//E9
         } else {
           SEND_STRING(SS_LALT("0233"));
         }
@@ -226,7 +226,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_EGRAVE:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"E*");//8
+          send_unicode_hex_string("E8");//8
         } else {
           SEND_STRING(SS_LALT("0232"));
         }
@@ -236,7 +236,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_ECIRC:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"EA");
+          send_unicode_hex_string("EA");
         } else {
           SEND_STRING(SS_LALT("0234"));
         }
@@ -246,7 +246,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_EDIAER:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"EB");
+          send_unicode_hex_string("EB");
         } else {
           SEND_STRING(SS_LALT("0235"));
         }
@@ -257,7 +257,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_IACUTE:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"ED");
+          send_unicode_hex_string("ED");
         } else {
           SEND_STRING(SS_LALT("0237"));
         }
@@ -267,7 +267,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_IGRAVE:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"EC");
+          send_unicode_hex_string("EC");
         } else {
           SEND_STRING(SS_LALT("0236"));
         }
@@ -277,7 +277,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_ICIRC:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"EE");
+          send_unicode_hex_string("EE");
         } else {
           SEND_STRING(SS_LALT("0238"));
         }
@@ -287,7 +287,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_IDIAER:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"EF");
+          send_unicode_hex_string("EF");
         } else {
           SEND_STRING(SS_LALT("0239"));
         }
@@ -298,7 +298,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_OACUTE:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"F#");//F3
+          send_unicode_hex_string("F3");//F3
         } else {
           SEND_STRING(SS_LALT("0243"));
         }
@@ -308,7 +308,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_OGRAVE:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"F@");//F2
+          send_unicode_hex_string("F2");//F2
         } else {
           SEND_STRING(SS_LALT("0242"));
         }
@@ -318,7 +318,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_OCIRC:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"F$");//F4
+          send_unicode_hex_string("F4");//F4
         } else {
           SEND_STRING(SS_LALT("0244"));
         }
@@ -328,7 +328,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_ODIAER:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"F^");//F6
+          send_unicode_hex_string("F6");//F6
         } else {
           SEND_STRING(SS_LALT("0246"));
         }
@@ -339,7 +339,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_UACUTE:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"FA");
+          send_unicode_hex_string("FA");
         } else {
           SEND_STRING(SS_LALT("0250"));
         }
@@ -349,7 +349,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_UGRAVE:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"F(");//F9
+          send_unicode_hex_string("F9");//F9
         } else {
           SEND_STRING(SS_LALT("0249"));
         }
@@ -359,7 +359,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_UCIRC:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"FB");
+          send_unicode_hex_string("FB");
         } else {
           SEND_STRING(SS_LALT("0251"));
         }
@@ -369,7 +369,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_UDIAER:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"FC");
+          send_unicode_hex_string("FC");
         } else {
           SEND_STRING(SS_LALT("0252"));
         }
@@ -380,7 +380,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_CCEDI:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"E&");//E7
+          send_unicode_hex_string("E7");//E7
         } else {
           SEND_STRING(SS_LALT("0231"));
         }
@@ -391,7 +391,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_EURO:
       if (record->event.pressed) {
         if (is_linux) {
-          SEND_STRING(SS_LCTRL(SS_LSFT("u"))"@)AC");//20AC
+          send_unicode_hex_string("20AC");//20AC
         } else {
           SEND_STRING(SS_LALT("0128"));
         }
