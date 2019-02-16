@@ -49,89 +49,89 @@ bool is_linux = false;// Used to detect on what OS I type and so what kind of sh
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox(
     // left hand
-    KC_NO,       KC_NO,       KC_NO,       KC_NO,         KC_NO,       KC_NO,       KC_NO,       
+    KC_ESC,       KC_NO,       KC_NO,       KC_NO,         KC_NO,       KC_NO,       KC_NO,       
     KC_NO,       KC_Q,          KC_W,          KC_E,          KC_R,          KC_T,          KC_NO,       
     MO(2),         KC_A,          KC_S,          KC_D,          KC_F,          KC_G,          
-    KC_NO,       KC_Z,          KC_X,          KC_C,          KC_V,          KC_B,          KC_NO,       
+    KC_TAB,       KC_Z,          KC_X,          KC_C,          KC_V,          KC_B,          KC_NO,       
     TO(1),         TO(2),         TO(3),       MO(3),         KC_DEL,        
-                                                                               KC_LALT,       KC_ESC,        
+                                                                               KC_LALT,       KC_NO,        
                                                                                               KC_NO,       
-                                                                SFT_T(KC_TAB), MO(1),      KC_LCTL,       
+                                                                KC_LSFT, MO(1),      KC_LCTL,       
         // right hand
         KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
         KC_NO,       KC_Y,          KC_U,          KC_I,          KC_O,          KC_P,          KC_NO,       
                        KC_H,          KC_J,          KC_K,          KC_L,          KC_M,       MO(2),         
-        KC_NO,       KC_N,          KC_NO,          KC_NO,       KC_NO,       KC_NO,       KC_NO,       
+        KC_NO,       KC_N,          KC_NO,          KC_NO,       KC_NO,       KC_NO,       KC_ENT,       
         KC_BSPC,       MO(3),         KC_NO,       KC_NO,       KC_NO,       
         LALT(KC_LCTL), KC_LCMD,       
         KC_NO,       
-        LSFT(KC_LCTL),       CTL_T(KC_ENT), SFT_T(KC_SPC)
+        LALT(KC_TAB),       KC_LCTL, SFT_T(KC_SPC)
     ),
 
 
   [1] = LAYOUT_ergodox(
     // left hand
-    KC_NO,       KC_F1,         KC_F2,         KC_F3,         KC_F4,         KC_F5,         KC_NO,       
+    KC_ESC,       KC_F1,         KC_F2,         KC_F3,         KC_F4,         KC_F5,         KC_NO,       
     KC_F11,        KC_1,          KC_2,          KC_3,          KC_4,          KC_5,          KC_NO,       
     KC_NO,       KC_MINS,       KC_EQL,        KC_SLSH,       KC_BSLS,       KC_QUOT,       
-    KC_NO,       KC_EXLM,       KC_AT,         KC_HASH,       KC_DLR,        KC_PERC,       KC_NO,       
+    KC_TAB,       KC_EXLM,       KC_AT,         KC_HASH,       KC_DLR,        KC_PERC,       KC_NO,       
     TO(0),         TO(2),         TO(3),       KC_NO,       KC_DEL,        
-                                                                               KC_LALT,       KC_ESC,        
+                                                                               KC_LALT,       KC_NO,        
                                                                                               KC_NO,       
-                                                                SFT_T(KC_TAB), KC_NO,       KC_LCTL,       
+                                                                KC_LSFT, KC_NO,       KC_LCTL,       
         // right hand
         KC_NO,       KC_F6,         KC_F7,         KC_F8,         KC_F9,         KC_F10,        TOG_OS,       
         KC_NO,       KC_6,          KC_7,          KC_8,          KC_9,          KC_0,          KC_F12,        
                        KC_SCLN,       KC_COMM,       KC_DOT,        KC_LBRC,       KC_RBRC,       KC_NO,       
-        KC_NO,       KC_CIRC,       KC_AMPR,       KC_ASTR,       KC_LPRN,       KC_RPRN,       KC_NO,       
+        KC_NO,       KC_CIRC,       KC_AMPR,       KC_ASTR,       KC_LPRN,       KC_RPRN,       KC_ENT,       
         KC_BSPC,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
         LALT(KC_LCTL), KC_LCMD,       
         KC_NO,       
-        LSFT(KC_LCTL),       CTL_T(KC_ENT), SFT_T(KC_SPC)
+        LALT(KC_TAB),       KC_LCTL, SFT_T(KC_SPC)
     ),
 
 
   [2] = LAYOUT_ergodox(
     // left hand
-    KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
+    KC_ESC,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
     KC_NO,       KC_NO,       KC_BTN1,       KC_BTN3,       KC_BTN2,       KC_NO,       KC_NO,       
     KC_NO,       KC_MS_L,       KC_MS_D,       KC_MS_U,       KC_MS_R,       KC_NO,       
-    KC_NO,       KC_WH_L,       KC_WH_D,       KC_WH_U,       KC_WH_R,       KC_NO,       KC_NO,       
+    KC_TAB,       KC_WH_L,       KC_WH_D,       KC_WH_U,       KC_WH_R,       KC_NO,       KC_NO,       
     TO(1),         TO(0),         TO(3),       KC_NO,       KC_DEL,        
-                                                                               KC_LALT,       KC_ESC,        
+                                                                               KC_LALT,       KC_NO,        
                                                                                               KC_NO,       
-                                                                SFT_T(KC_TAB), KC_NO,       KC_LCTL,       
+                                                                KC_LSFT, KC_NO,       KC_LCTL,       
         // right hand
         KC_MPRV,       KC_MNXT,       KC_MUTE,       KC_VOLD,       KC_VOLU,       KC_MSTP,       KC_MPLY,       
         KC_NO,       KC_NO,       KC_HOME,       KC_PGDN,       KC_PGUP,       KC_END,        KC_NO,       
                        KC_NO,       KC_LEFT,       KC_DOWN,       KC_UP,         KC_RGHT,       KC_NO,       
-        KC_NO,       KC_NO,       KC_ACL0,       KC_ACL1,       KC_ACL2,       KC_NO,       KC_NO,       
+        KC_NO,       KC_NO,       KC_ACL0,       KC_ACL1,       KC_ACL2,       KC_NO,       KC_ENT,       
         KC_BSPC,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
         LALT(KC_LCTL), KC_LCMD,       
         KC_NO,       
-        LSFT(KC_LCTL),       CTL_T(KC_ENT), SFT_T(KC_SPC)
+        LALT(KC_TAB),       KC_LCTL, SFT_T(KC_SPC)
     ),
 
 
   [3] = LAYOUT_ergodox(
     // left hand
-    KC_NO,        CS_AACUTE,    CS_AGRAVE,    CS_ACIRC,     CS_ADIAER,    CS_UACUTE,      KC_NO,      
-    KC_NO,        CS_EACUTE,    CS_EGRAVE,    CS_ECIRC,     CS_EDIAER,    CS_UGRAVE,      KC_NO,       
+    KC_ESC,        CS_AACUTE,    CS_AGRAVE,    CS_ACIRC,     CS_ADIAER,    CS_UACUTE,      KC_NO,      
+    CS_EURO,        CS_EACUTE,    CS_EGRAVE,    CS_ECIRC,     CS_EDIAER,    CS_UGRAVE,      KC_NO,       
     CS_CCEDI,     CS_IACUTE,    CS_IGRAVE,    CS_ICIRC,     CS_IDIAER,    CS_UCIRC,      
-    CS_EURO,      CS_OACUTE,    CS_OGRAVE,    CS_OCIRC,     CS_ODIAER,    CS_UDIAER,      KC_NO,      
+    KC_TAB,      CS_OACUTE,    CS_OGRAVE,    CS_OCIRC,     CS_ODIAER,    CS_UDIAER,      KC_NO,      
     TO(1),         TO(2),         TO(0),        KC_NO,        KC_DEL,      
-                                                                               KC_LALT,       KC_ESC,        
+                                                                               KC_LALT,       KC_NO,        
                                                                                               KC_NO,       
-                                                                SFT_T(KC_TAB), KC_NO,       KC_LCTL,       
+                                                                KC_LSFT, KC_NO,       KC_LCTL,       
         // right hand
         KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
         KC_NO,       KC_NO,       KC_P7,         KC_P8,         KC_P9,         KC_PSLS,       KC_NO,       
                        KC_NO,       KC_P4,         KC_P5,         KC_P6,         KC_PAST,       KC_NO,       
-        KC_NO,       KC_P0,         KC_P1,         KC_P2,         KC_P3,         KC_PMNS,       KC_NO,       
+        KC_NO,       KC_P0,         KC_P1,         KC_P2,         KC_P3,         KC_PMNS,       KC_ENT,       
         KC_BSPC,       KC_NO,       KC_PDOT,       KC_PPLS,       KC_NO,       
         LALT(KC_LCTL), KC_LCMD,       
         KC_NO,       
-        LSFT(KC_LCTL),       CTL_T(KC_ENT), SFT_T(KC_SPC)
+        LALT(KC_TAB),       KC_LCTL, SFT_T(KC_SPC)
     ),
 
 
@@ -177,7 +177,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("E1");//E1
         } else {
-          SEND_STRING(SS_LALT("0225"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_5));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -187,7 +192,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("E0");//E0
         } else {
-          SEND_STRING(SS_LALT("0224"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_4));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -197,7 +207,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("E2");//E2
         } else {
-          SEND_STRING(SS_LALT("0226"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_6));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -207,7 +222,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("E4");//E4
         } else {
-          SEND_STRING(SS_LALT("0228"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_8));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -218,7 +238,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("E9");//E9
         } else {
-          SEND_STRING(SS_LALT("0233"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_3));
+          SEND_STRING(SS_TAP(X_KP_3));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -228,7 +253,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("E8");//8
         } else {
-          SEND_STRING(SS_LALT("0232"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_3));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -238,7 +268,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("EA");
         } else {
-          SEND_STRING(SS_LALT("0234"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_3));
+          SEND_STRING(SS_TAP(X_KP_4));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -248,7 +283,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("EB");
         } else {
-          SEND_STRING(SS_LALT("0235"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_3));
+          SEND_STRING(SS_TAP(X_KP_5));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -259,7 +299,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("ED");
         } else {
-          SEND_STRING(SS_LALT("0237"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_3));
+          SEND_STRING(SS_TAP(X_KP_7));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -269,7 +314,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("EC");
         } else {
-          SEND_STRING(SS_LALT("0236"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_3));
+          SEND_STRING(SS_TAP(X_KP_6));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -279,7 +329,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("EE");
         } else {
-          SEND_STRING(SS_LALT("0238"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_3));
+          SEND_STRING(SS_TAP(X_KP_8));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -289,7 +344,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("EF");
         } else {
-          SEND_STRING(SS_LALT("0239"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_3));
+          SEND_STRING(SS_TAP(X_KP_9));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -300,7 +360,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("F3");//F3
         } else {
-          SEND_STRING(SS_LALT("0243"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_4));
+          SEND_STRING(SS_TAP(X_KP_3));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -310,7 +375,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("F2");//F2
         } else {
-          SEND_STRING(SS_LALT("0242"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_4));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -320,7 +390,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("F4");//F4
         } else {
-          SEND_STRING(SS_LALT("0244"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_4));
+          SEND_STRING(SS_TAP(X_KP_4));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -330,7 +405,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("F6");//F6
         } else {
-          SEND_STRING(SS_LALT("0246"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_4));
+          SEND_STRING(SS_TAP(X_KP_6));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -341,7 +421,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("FA");
         } else {
-          SEND_STRING(SS_LALT("0250"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_5));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -351,7 +436,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("F9");//F9
         } else {
-          SEND_STRING(SS_LALT("0249"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_4));
+          SEND_STRING(SS_TAP(X_KP_9));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -361,7 +451,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("FB");
         } else {
-          SEND_STRING(SS_LALT("0251"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_5));
+          SEND_STRING(SS_TAP(X_KP_1));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -371,7 +466,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("FC");
         } else {
-          SEND_STRING(SS_LALT("0252"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_5));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -382,7 +482,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("E7");//E7
         } else {
-          SEND_STRING(SS_LALT("0231"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_3));
+          SEND_STRING(SS_TAP(X_KP_1));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
@@ -393,7 +498,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (is_linux) {
           send_unicode_hex_string("20AC");//20AC
         } else {
-          SEND_STRING(SS_LALT("0128"));
+          SEND_STRING(SS_DOWN(X_LALT));
+          SEND_STRING(SS_TAP(X_KP_0));
+          SEND_STRING(SS_TAP(X_KP_1));
+          SEND_STRING(SS_TAP(X_KP_2));
+          SEND_STRING(SS_TAP(X_KP_8));
+          SEND_STRING(SS_UP(X_LALT));
         }
       }
       return false;
