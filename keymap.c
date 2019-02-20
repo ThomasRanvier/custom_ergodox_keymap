@@ -155,6 +155,14 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
     return MACRO_NONE;
 };
 
+void cs_send_unicode(void) {
+  SEND_STRING(SS_DOWN(X_LCTRL));
+  SEND_STRING(SS_DOWN(X_LSHIFT));
+  SEND_STRING(SS_TAP(X_U));
+  SEND_STRING(SS_UP(X_LCTRL));
+  SEND_STRING(SS_UP(X_LSHIFT));
+};
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     // dynamically generate these.
@@ -175,7 +183,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_AACUTE:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("E1");//E1
+          cs_send_unicode();
+          SEND_STRING("e1 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -190,7 +199,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_AGRAVE:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("E0");//E0
+          cs_send_unicode();
+          SEND_STRING("e0 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -205,7 +215,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_ACIRC:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("E2");//E2
+          cs_send_unicode();
+          SEND_STRING("e2 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -220,7 +231,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_ADIAER:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("E4");//E4
+          cs_send_unicode();
+          SEND_STRING("e4 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -236,7 +248,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_EACUTE:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("E9");//E9
+          cs_send_unicode();
+          SEND_STRING("e9 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -251,7 +264,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_EGRAVE:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("E8");//8
+          cs_send_unicode();
+          SEND_STRING("e8 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -266,7 +280,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_ECIRC:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("EA");
+          cs_send_unicode();
+          SEND_STRING("ea ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -281,7 +296,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_EDIAER:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("EB");
+          cs_send_unicode();
+          SEND_STRING("eb ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -297,7 +313,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_IACUTE:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("ED");
+          cs_send_unicode();
+          SEND_STRING("ed ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -312,7 +329,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_IGRAVE:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("EC");
+          cs_send_unicode();
+          SEND_STRING("ec ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -327,7 +345,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_ICIRC:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("EE");
+          cs_send_unicode();
+          SEND_STRING("ee ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -342,7 +361,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_IDIAER:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("EF");
+          cs_send_unicode();
+          SEND_STRING("ef ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -358,7 +378,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_OACUTE:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("F3");//F3
+          cs_send_unicode();
+          SEND_STRING("f3 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -373,7 +394,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_OGRAVE:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("F2");//F2
+          cs_send_unicode();
+          SEND_STRING("f2 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -388,7 +410,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_OCIRC:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("F4");//F4
+          cs_send_unicode();
+          SEND_STRING("f4 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -403,7 +426,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_ODIAER:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("F6");//F6
+          cs_send_unicode();
+          SEND_STRING("f6 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -419,7 +443,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_UACUTE:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("FA");
+          cs_send_unicode();
+          SEND_STRING("fa ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -434,7 +459,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_UGRAVE:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("F9");//F9
+          cs_send_unicode();
+          SEND_STRING("f9 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -449,7 +475,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_UCIRC:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("FB");
+          cs_send_unicode();
+          SEND_STRING("fb ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -464,7 +491,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_UDIAER:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("FC");
+          cs_send_unicode();
+          SEND_STRING("fc ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -480,7 +508,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_CCEDI:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("E7");//E7
+          cs_send_unicode();
+          SEND_STRING("e7 ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
@@ -496,7 +525,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case CS_EURO:
       if (record->event.pressed) {
         if (is_linux) {
-          send_unicode_hex_string("20AC");//20AC
+          cs_send_unicode();
+          SEND_STRING("20ac ");
         } else {
           SEND_STRING(SS_DOWN(X_LALT));
           SEND_STRING(SS_TAP(X_KP_0));
