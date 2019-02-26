@@ -49,89 +49,89 @@ bool is_linux = false;// Used to detect on what OS I type and so what kind of sh
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox(
     // left hand
-    KC_ESC,       KC_NO,       KC_NO,       KC_NO,         KC_NO,       KC_NO,       KC_NO,       
-    KC_NO,       KC_Q,          KC_W,          KC_E,          KC_R,          KC_T,          KC_NO,       
+    KC_NO,       TO(1),       TO(2),       KC_NO,         KC_NO,       KC_NO,       KC_NO,       
+    KC_ESC,       KC_Q,          KC_W,          KC_E,          KC_R,          KC_T,          KC_MINS,       
     MO(2),         KC_A,          KC_S,          KC_D,          KC_F,          KC_G,          
-    KC_TAB,       KC_Z,          KC_X,          KC_C,          KC_V,          KC_B,          KC_NO,       
-    TO(1),         TO(2),         TO(3),       MO(3),         KC_DEL,        
-                                                                               KC_LALT,       KC_NO,        
+    KC_QUOT,       KC_Z,          KC_X,          KC_C,          KC_V,          KC_B,          KC_TAB,       
+    KC_LCTL,         KC_NO,         KC_NO,       MO(3),         KC_DEL,        
+                                                                               KC_LALT,       KC_ESC,        
                                                                                               KC_NO,       
-                                                                KC_LSFT, MO(1),      KC_LCTL,       
+                                                                KC_LSFT, MO(1),      KC_LCMD,       
         // right hand
         KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
-        KC_NO,       KC_Y,          KC_U,          KC_I,          KC_O,          KC_P,          KC_NO,       
+        KC_EQL,       KC_Y,          KC_U,          KC_I,          KC_O,          KC_P,          KC_GRAVE,       
                        KC_H,          KC_J,          KC_K,          KC_L,          KC_M,       MO(2),         
-        KC_NO,       KC_N,          KC_NO,          KC_NO,       KC_NO,       KC_NO,       KC_ENT,       
-        KC_BSPC,       MO(3),         KC_NO,       KC_NO,       KC_NO,       
+        KC_ENT,       KC_N,          KC_COMM,       KC_DOT,        KC_LBRC,       KC_RBRC,      KC_SCLN,       
+        KC_BSPC,       MO(3),         KC_SLSH,       KC_BSLS,       KC_LCTL,       
         LALT(KC_LCTL), KC_LCMD,       
         KC_NO,       
-        LALT(KC_TAB),       KC_LCTL, SFT_T(KC_SPC)
+        LALT(KC_TAB),       KC_LALT, SFT_T(KC_SPC)
     ),
 
 
   [1] = LAYOUT_ergodox(
     // left hand
-    KC_ESC,       KC_F1,         KC_F2,         KC_F3,         KC_F4,         KC_F5,         KC_NO,       
-    KC_F11,        KC_1,          KC_2,          KC_3,          KC_4,          KC_5,          KC_NO,       
-    KC_NO,       KC_MINS,       KC_EQL,        KC_SLSH,       KC_BSLS,       KC_QUOT,       
-    KC_TAB,       KC_EXLM,       KC_AT,         KC_HASH,       KC_DLR,        KC_PERC,       KC_NO,       
-    TO(0),         TO(2),         TO(3),       KC_NO,       KC_DEL,        
-                                                                               KC_LALT,       KC_NO,        
+    KC_NO,       TO(0),         TO(2),         KC_NO,         KC_NO,         KC_NO,         KC_NO,       
+    KC_ESC,        KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_NO,       
+    KC_NO,       KC_EXLM,       KC_AT,         KC_HASH,       KC_DLR,        KC_PERC,       
+    KC_NO,       KC_1,       KC_2,        KC_3,       KC_4,       KC_5,       KC_TAB,       
+    KC_LCTL,         KC_NO,         KC_NO,       KC_NO,       KC_DEL,        
+                                                                               KC_LALT,       KC_ESC,        
                                                                                               KC_NO,       
-                                                                KC_LSFT, KC_NO,       KC_LCTL,       
+                                                                KC_LSFT, KC_NO,       KC_LCMD,       
         // right hand
-        KC_NO,       KC_F6,         KC_F7,         KC_F8,         KC_F9,         KC_F10,        TOG_OS,       
-        KC_NO,       KC_6,          KC_7,          KC_8,          KC_9,          KC_0,          KC_F12,        
-                       KC_SCLN,       KC_COMM,       KC_DOT,        KC_LBRC,       KC_RBRC,       KC_NO,       
-        KC_NO,       KC_CIRC,       KC_AMPR,       KC_ASTR,       KC_LPRN,       KC_RPRN,       KC_ENT,       
-        KC_BSPC,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
+        KC_NO,       KC_NO,         KC_NO,         KC_NO,         KC_NO,         KC_NO,        TOG_OS,       
+        KC_NO,       KC_F6,         KC_F7,         KC_F8,         KC_F9,         KC_F10,        KC_F11,       
+                    KC_CIRC,       KC_AMPR,       KC_ASTR,       KC_LPRN,       KC_RPRN,       KC_F12,       
+        KC_ENT,       KC_6,       KC_7,        KC_8,       KC_9,       KC_0,       KC_NO,       
+        KC_BSPC,       KC_NO,       KC_NO,       KC_NO,       KC_LCTL,       
         LALT(KC_LCTL), KC_LCMD,       
         KC_NO,       
-        LALT(KC_TAB),       KC_LCTL, SFT_T(KC_SPC)
+        LALT(KC_TAB),       KC_LALT, SFT_T(KC_SPC)
     ),
 
 
   [2] = LAYOUT_ergodox(
     // left hand
-    KC_ESC,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
-    KC_NO,       KC_NO,       KC_BTN1,       KC_BTN3,       KC_BTN2,       KC_NO,       KC_NO,       
+    KC_NO,       TO(1),         TO(0),       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
+    KC_ESC,       KC_NO,       KC_BTN1,       KC_BTN3,       KC_BTN2,       KC_NO,       KC_NO,       
     KC_NO,       KC_MS_L,       KC_MS_D,       KC_MS_U,       KC_MS_R,       KC_NO,       
-    KC_TAB,       KC_WH_L,       KC_WH_D,       KC_WH_U,       KC_WH_R,       KC_NO,       KC_NO,       
-    TO(1),         TO(0),         TO(3),       KC_NO,       KC_DEL,        
-                                                                               KC_LALT,       KC_NO,        
+    KC_NO,       KC_WH_L,       KC_WH_D,       KC_WH_U,       KC_WH_R,       KC_NO,       KC_TAB,       
+    KC_LCTL,    KC_NO,          KC_NO,       KC_NO,       KC_DEL,        
+                                                                               KC_LALT,       KC_ESC,        
                                                                                               KC_NO,       
-                                                                KC_LSFT, KC_NO,       KC_LCTL,       
+                                                                KC_LSFT, KC_NO,       KC_LCMD,       
         // right hand
         KC_MPRV,       KC_MNXT,       KC_MUTE,       KC_VOLD,       KC_VOLU,       KC_MSTP,       KC_MPLY,       
         KC_NO,       KC_NO,       KC_HOME,       KC_PGDN,       KC_PGUP,       KC_END,        KC_NO,       
                        KC_NO,       KC_LEFT,       KC_DOWN,       KC_UP,         KC_RGHT,       KC_NO,       
-        KC_NO,       KC_NO,       KC_ACL0,       KC_ACL1,       KC_ACL2,       KC_NO,       KC_ENT,       
-        KC_BSPC,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
+        KC_ENT,       KC_NO,       KC_ACL0,       KC_ACL1,       KC_ACL2,       KC_NO,       KC_NO,       
+        KC_BSPC,       KC_NO,       KC_NO,       KC_NO,       KC_LCTL,       
         LALT(KC_LCTL), KC_LCMD,       
         KC_NO,       
-        LALT(KC_TAB),       KC_LCTL, SFT_T(KC_SPC)
+        LALT(KC_TAB),       KC_LALT, SFT_T(KC_SPC)
     ),
 
 
   [3] = LAYOUT_ergodox(
     // left hand
-    KC_ESC,        CS_AACUTE,    CS_AGRAVE,    CS_ACIRC,     CS_ADIAER,    CS_UACUTE,      KC_NO,      
-    CS_EURO,        CS_EACUTE,    CS_EGRAVE,    CS_ECIRC,     CS_EDIAER,    CS_UGRAVE,      KC_NO,       
+    KC_NO,        CS_AACUTE,    CS_AGRAVE,    CS_ACIRC,     CS_ADIAER,    CS_UACUTE,      KC_NO,      
+    KC_ESC,        CS_EACUTE,    CS_EGRAVE,    CS_ECIRC,     CS_EDIAER,    CS_UGRAVE,      KC_NO,       
     CS_CCEDI,     CS_IACUTE,    CS_IGRAVE,    CS_ICIRC,     CS_IDIAER,    CS_UCIRC,      
-    KC_TAB,      CS_OACUTE,    CS_OGRAVE,    CS_OCIRC,     CS_ODIAER,    CS_UDIAER,      KC_NO,      
-    TO(1),         TO(2),         TO(0),        KC_NO,        KC_DEL,      
-                                                                               KC_LALT,       KC_NO,        
+    CS_EURO,      CS_OACUTE,    CS_OGRAVE,    CS_OCIRC,     CS_ODIAER,    CS_UDIAER,      KC_TAB,      
+    KC_LCTL,         KC_NO,         KC_NO,        KC_NO,        KC_DEL,      
+                                                                               KC_LALT,       KC_ESC,        
                                                                                               KC_NO,       
-                                                                KC_LSFT, KC_NO,       KC_LCTL,       
+                                                                KC_LSFT, KC_NO,       KC_LCMD,       
         // right hand
         KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       KC_NO,       
         KC_NO,       KC_NO,       KC_P7,         KC_P8,         KC_P9,         KC_PSLS,       KC_NO,       
                        KC_NO,       KC_P4,         KC_P5,         KC_P6,         KC_PAST,       KC_NO,       
-        KC_NO,       KC_P0,         KC_P1,         KC_P2,         KC_P3,         KC_PMNS,       KC_ENT,       
-        KC_BSPC,       KC_NO,       KC_PDOT,       KC_PPLS,       KC_NO,       
+        KC_ENT,       KC_P0,         KC_P1,         KC_P2,         KC_P3,         KC_PMNS,       KC_NO,       
+        KC_BSPC,       KC_NO,       KC_PDOT,       KC_PPLS,       KC_LCTL,       
         LALT(KC_LCTL), KC_LCMD,       
         KC_NO,       
-        LALT(KC_TAB),       KC_LCTL, SFT_T(KC_SPC)
+        LALT(KC_TAB),       KC_LALT, SFT_T(KC_SPC)
     ),
 
 
